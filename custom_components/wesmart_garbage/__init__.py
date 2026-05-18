@@ -4,7 +4,10 @@ from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.storage import Store
 from homeassistant.helpers import discovery
 from homeassistant.helpers.dispatcher import async_dispatcher_send
+from homeassistant.helpers import config_validation as cv
 from .const import DOMAIN, STORAGE_KEY, STORAGE_VERSION, SIGNAL_UPDATE_GARBAGE
+
+CONFIG_SCHEMA = cv.empty_config_schema(DOMAIN)
 
 _LOGGER = logging.getLogger(__name__)
 
