@@ -1,0 +1,11 @@
+{
+  "domain": "wesmart_garbage",
+  "name": "WeSmart Garbage",
+  "codeowners": ["@massimodivona"],
+  "dependencies": [],
+  "documentation": "https://github.com/WeAreSmart-home/wesmart-garbage",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/WeAreSmart-home/wesmart-garbage/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
