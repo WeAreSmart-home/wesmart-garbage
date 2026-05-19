@@ -91,7 +91,30 @@ data:
 A companion Lovelace card is available as a separate HACS repository:
 👉 [wesmart-garbage-card](https://github.com/WeAreSmart-home/wesmart-garbage-card)
 
-The card provides a visual schedule editor and shows today's and upcoming collections.
+The card reads the schedule from `sensor.wesmart_garbage_today` and provides:
+
+- **Phase-aware hero** — today and tomorrow shown side by side; after a configurable hour (default 18:00) today fades to gray and tomorrow becomes the focus
+- **Upcoming list** — collections from the day after tomorrow onward, with contextual labels ("Esporre stasera", "Esporre adesso")
+- **Built-in editor** — toggle waste types per day directly from the card; changes persist immediately via `wesmart_garbage.update_schedule`
+
+Minimal YAML to add the card:
+
+```yaml
+type: custom:wesmart-infinite-garbage-lab-card
+```
+
+Full example with all options:
+
+```yaml
+type: custom:wesmart-infinite-garbage-lab-card
+title: Raccolta Rifiuti
+color: "#D97757"
+theme: auto
+show_weekly_schedule: true
+remind_hour: 18   # hour at which evening urgency phase activates (0–23)
+```
+
+See the [card repository](https://github.com/WeAreSmart-home/wesmart-garbage-card) for full documentation.
 
 ---
 
