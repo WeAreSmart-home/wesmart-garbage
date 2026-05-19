@@ -225,11 +225,6 @@
       const sensor = hass.states['sensor.wesmart_garbage_today'];
       if (!this._optimisticTimeout) {
         this._schedule = sensor ? sensor.attributes.schedule || {} : {};
-      }
-      const now = new Date();
-      const renderKey = `${sensor?.state || ''}|${now.toDateString()}-${now.getHours() >= this._config.remind_hour ? 1 : 0}`;
-      if (this._lastRenderKey !== renderKey) {
-        this._lastRenderKey = renderKey;
         this._render();
       }
     }
